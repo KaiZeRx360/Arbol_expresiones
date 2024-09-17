@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Expresiones Matemáticas</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card p-4 shadow-lg">
+            <h1 class="text-center">Árbol de Expresiones</h1>
+            <div class="form-group">
+                <label for="expresion">Ingrese una expresión:</label>
+                <input type="text" id="expresion" class="form-control" placeholder="Ejemplo: (19+20)+A">
+            </div>
+            <button class="btn btn-danger btn-block mb-3" onclick="generarArbol()">
+                <i class="fas fa-tree"></i> Generar Árbol
+            </button>
+            <button class="btn btn-secondary btn-block mb-3" onclick="limpiarArbol()">
+                <i class="fas fa-trash-alt"></i> Limpiar Árbol
+            </button>
+            <!-- Botones para mostrar los recorridos -->
+            <button class="btn btn-info btn-block mb-3" onclick="mostrarPreorden()">
+                <i class="fas fa-list"></i> Preorden
+            </button>
+            <button class="btn btn-info btn-block mb-3" onclick="mostrarInorden()">
+                <i class="fas fa-list"></i> Inorden
+            </button>
+            <button class="btn btn-info btn-block mb-3" onclick="mostrarPostorden()">
+                <i class="fas fa-list"></i> Postorden
+            </button>
+            <div id="arbol" class="mt-4 text-center"></div>
+            <div id="recorridos" class="mt-4 caja-recorridos text-center"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
